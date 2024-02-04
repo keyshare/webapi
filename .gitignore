@@ -1,0 +1,6 @@
+.*.sw[op]
+.stack-work/
+*~
+
+# Project specific
+Main
