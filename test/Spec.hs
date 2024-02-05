@@ -1,2 +1,11 @@
+{-# OPTIONS_GHC -F -pgmF htfpp #-}
+module Main ( main ) where
+
+
+import Test.Framework 
+import {-@ HTF_TESTS @-} Json
+
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = htfMain htf_importedTests
+-- main = htfMain htf_thisModulesTests

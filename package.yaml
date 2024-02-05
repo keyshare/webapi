@@ -65,3 +65,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - keyshare-webapi
+    - HTF
+    - HUnit

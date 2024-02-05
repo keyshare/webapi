@@ -63,6 +63,7 @@ test-suite keyshare-webapi-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      Json
       Paths_keyshare_webapi
   autogen-modules:
       Paths_keyshare_webapi
@@ -70,7 +71,9 @@ test-suite keyshare-webapi-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      HTF
+    , HUnit
+    , base >=4.7 && <5
     , bytestring
     , http-types >=0.12.4
     , keyshare-webapi

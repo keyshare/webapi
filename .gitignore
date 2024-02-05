@@ -1,6 +1,6 @@
 .*.sw[op]
 .stack-work/
 *~
-
+.HTF
 # Project specific
 Main
