@@ -35,7 +35,9 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , http-types >=0.12.4
+    , text
     , wai >=3.2.4
     , warp >=3.3.31
   default-language: Haskell2010
@@ -47,8 +49,10 @@ executable keyshare-webapi-serve
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , http-types >=0.12.4
     , keyshare-webapi
+    , text
     , wai >=3.2.4
     , warp >=3.3.31
   default-language: Haskell2010
@@ -65,8 +69,10 @@ test-suite keyshare-webapi-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , http-types >=0.12.4
     , keyshare-webapi
+    , text
     , wai >=3.2.4
     , warp >=3.3.31
   default-language: Haskell2010

@@ -23,7 +23,8 @@ dependencies:
 - wai >= 3.2.4
 - warp >= 3.3.31
 - http-types >=0.12.4
-
+- text
+- bytestring
 
 ghc-options:
 - -Wall
