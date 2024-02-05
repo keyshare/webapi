@@ -1,37 +1,29 @@
 {-# LANGUAGE OverloadedStrings #-}
 module App ( 
-    keyshare
-    ) where
+  keyshare
+  ) where
 
 
+import Http
 import Data.Text
-import Data.ByteString.Lazy.Internal (ByteString)
 import Network.Wai
-import Network.HTTP.Types
-
-
-okText :: ByteString -> (Response -> IO ResponseReceived) -> IO ResponseReceived
-okText body respond = respond $ responseLBS 
-  status200 
-  [("Content-Type", "text/plain")] 
-  (body <> "\r\n")
 
 
 foo :: Application
-foo _ = okText "Hello, foo!"
+foo _ = textOk "Hello, foo!"
 
 
 foobar :: Application
-foobar _ = okText "Hello, foo bar!"
+foobar _ = textOk "Hello, foo bar!"
 
 
 root :: Application
-root _ = okText "Hello, root!"
+root _ = textOk "Hello, root!"
 
 
 route :: [Text] -> Application
-route ("foo":[]) = foo
 route ("foo":"bar":_) = foobar
+route ("foo":_) = foo
 route _ = root
 
 

@@ -51,6 +51,7 @@ executables:
     - -with-rtsopts=-N
     other-modules:
     - App
+    - Http
     dependencies:
     - keyshare-webapi
 

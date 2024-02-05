@@ -26,6 +26,7 @@ library
   exposed-modules:
       App
   other-modules:
+      Http
       Main
       Paths_keyshare_webapi
   autogen-modules:
@@ -46,6 +47,7 @@ executable keyshare-webapi-serve
   main-is: Main.hs
   other-modules:
       App
+      Http
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
